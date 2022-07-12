@@ -1,0 +1,109 @@
+﻿@model IlkizMakinaProject.Models.IndexViewModel
+
+@section Menu
+{
+    <ul id="nav">
+        <li class="active"><a href="/">Anasayfa</a></li>
+        <li><a href="/Home/About">Hakkımızda</a></li>
+        <li>
+            <a class="has-drop-down-a">Ürünler</a>
+            <ul>
+                @foreach (var mainProduct in Model.GetMainProducts())
+                {
+                    <li>
+                        <a>
+                            @mainProduct.NameTR
+                        </a>
+                        <ul>
+                            @foreach (var subProduct in Model.GetSubProducts(mainProduct.Id))
+                            {
+                                <li><a href="/Home/Products/@subProduct.Id">@subProduct.NameTR</a></li>
+                            }
+                        </ul>
+
+                    </li>
+                }
+            </ul>
+        </li>
+        @*<li><a href="/Home/Portfolio">Referanslar</a></li>*@
+        <li><a href="/Home/Contact">İletişim</a></li>
+    </ul>
+    <select class="mobile-menu">
+        <option selected="selected" value="/">Anasayfa</option>
+        <option value="/Home/About">Hakkımızda</option>
+        <option value="">Ürünler</option>
+        @foreach (var mainProduct in Model.GetMainProducts())
+        {
+            @*<option value="">- @mainProduct.NameTR</option>*@
+            foreach (var subProduct in Model.GetSubProducts(mainProduct.Id))
+            {
+                <option value="/Home/Products/@subProduct.Id">&nbsp;&nbsp;- @subProduct.NameTR</option>
+            }
+        }
+        @*<option value="/Home/Portfolio">Referanslar</option>*@
+        <option value="/Home/Contact">İletişim</option>
+    </select>
+}
+
+@section Main
+{
+    <!-- Accordion Slider -->
+    <div class="gallery banner-mobile"><img src="~/Content/Images/Banners/1.png" alt="Smart Business" /></div>
+    <div class="gallery" id="gallery-accordion">
+        <div class="gallery-holder">
+            <div class="block_slider_accordion">
+                <div class="slider_wrapper">
+                    <ul id="slider_accordion_ul">
+                        @foreach (var banner in Model.GetBanners())
+                        {
+                            <li>
+                                <a title="@banner.TooltipTR">
+                                    <img src="@banner.Image" alt="" class="slider_image" />
+                                </a>
+                                <div class="accordion_text">
+                                    <div class="short_text">
+                                        <a>@banner.HeaderTR</a>
+                                    </div>
+                                    <div class="detail_text">
+                                        @banner.DescriptionTR
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- boxes -->
+    <section class="boxes">
+        <div class="holder">
+            <!-- title-box -->
+            <div class="title-box2">
+                <h2>@Model.GetHeader()</h2>
+            </div>
+        </div>
+    </section>
+    <div class="main-container">
+         <!-- grid-cols -->
+        <div class="grid-cols">
+            @foreach (var subbanner in Model.GetSubBanners())
+            {
+                <div class="col33">
+                    <div class="col-holder">
+                        <h3>@subbanner.HeaderTR</h3>
+                        <span class="image center"><img src="@subbanner.Image" alt="" /></span>
+                        <p>@subbanner.DescriptionTR</p>
+                    </div>
+                </div>
+            }           
+                        
+        </div><br>       
+    </div>
+    <!-- quote-box -->
+    <section class="quote-box">
+        <div class="holder">
+            <h4>@Model.GetDescription()</h4>
+        </div>
+    </section>
+}

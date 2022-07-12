@@ -1,0 +1,102 @@
+﻿@model IlkizMakinaProject.Models.ProductsViewModel
+
+@section Menu
+{
+    <ul id="nav">
+        <li><a href="/">Anasayfa</a></li>
+        <li><a href="/Home/About">Hakkımızda</a></li>
+        <li class="active">
+            <a class="has-drop-down-a">Ürünler</a>
+            <ul>
+                @foreach (var mainProduct in Model.GetMainProducts())
+                {
+                    <li>
+                        <a>
+                            @mainProduct.NameTR
+                        </a>
+                        <ul>
+                            @foreach (var subProduct in Model.GetSubProducts(mainProduct.Id))
+                            {
+                                <li><a href="/Home/Products/@subProduct.Id">@subProduct.NameTR</a></li>
+                            }
+                        </ul>
+
+                    </li>
+                }
+            </ul>
+        </li>
+        @*<li><a href="/Home/Portfolio">Referanslar</a></li>*@
+        <li><a href="/Home/Contact">İletişim</a></li>
+    </ul>
+    <select class="mobile-menu">
+        <option selected="selected" value="/">Anasayfa</option>
+        <option value="/Home/About">Hakkımızda</option>
+        <option value="">Ürünler</option>
+        @foreach (var mainProduct in Model.GetMainProducts())
+    {
+            @*<option value="">- @mainProduct.NameTR</option>*@
+            foreach (var subProduct in Model.GetSubProducts(mainProduct.Id))
+            {
+                <option value="/Home/Products/@subProduct.Id">&nbsp;&nbsp;- @subProduct.NameTR</option>
+            }
+        }
+        @*<option value="/Home/Portfolio">Referanslar</option>*@
+        <option value="/Home/Contact">İletişim</option>
+    </select>
+}
+
+@section Main
+{
+    <!-- content-panel -->
+    <div class="content-panel">
+        <div class="page-title">
+            <h2></h2>
+        </div>
+    </div>
+
+    <!-- portfolio-box -->
+    <section class="portfolio-box last">
+        <h4></h4>
+        <span class="image">
+            <img src="@Model.GetProductImages().First()" alt="" width="620" height="412" />
+            <span class="mask"></span>
+            <a href="@Model.GetProductImages().First()" class="btn-photo">photo</a>
+        </span>
+        <div class="text-box">
+            <h4>@Model.GetProduct().NameTR</h4>
+            <p>@Model.GetProduct().DescriptionTR</p>
+        </div>
+    </section>
+
+    <!-- portfolio-section -->
+    <div class="portfolio-section alt">
+        @{int num = 0;
+    foreach (var image in @Model.GetProductImages().Skip(1))
+    {
+        if (num % 4 == 0)
+        {
+        <!-- portfolio-boxes -->
+                    @Html.Raw("<section class='portfolio-boxes alt col4'>")
+                    @Html.Raw("<div class='portfolio-holder'>")
+                }
+                <aside class="box">
+                    <div class="box-holder">
+                        <span class="image">
+                            <img src="@image" alt="" />
+                            <span class="mask"></span>
+                            <a href="@image" class="btn-photo">photo</a>
+                        </span>
+                    </div>
+                </aside>
+                if (num % 4 == 3 || Model.GetProductImages().Skip(1).Count() == num + 1)
+                {
+                    @Html.Raw("</div>")
+                    @Html.Raw("</section>")
+                }
+                num++;
+            }
+        }
+
+        <div class="divider-portfolio"></div>
+    </div>
+}

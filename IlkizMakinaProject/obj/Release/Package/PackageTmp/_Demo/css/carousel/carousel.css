@@ -1,0 +1,35 @@
+/*slider carousel*/
+.slider_list_carousel {
+	width: 980px;
+	height: 398px;
+}
+.slider_list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.slider_list_carousel ul li {
+	font-size: 40px;
+	color: #999;
+	text-align: center;
+	background-color: #eee;
+	border: 0px solid #999;
+	width: 980px;
+	height: 398px;
+	padding: 0;
+	margin: 0px;
+	display: block;
+	float: left;
+}
+.timer {
+	background: rgba(0,0,0, .3);
+	margin-top: -5px;
+	height: 5px;
+	width: 0px;
+	position:absolute;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}

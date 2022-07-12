@@ -1,0 +1,146 @@
+﻿@model IlkizMakinaProject.Models.ContactViewModel
+
+@section Menu
+{
+    <ul id="nav">
+        <li><a href="/">Anasayfa</a></li>
+        <li><a href="/Home/About">Hakkımızda</a></li>
+        <li>
+            <a class="has-drop-down-a">Ürünler</a>
+            <ul>
+                @foreach (var mainProduct in Model.GetMainProducts())
+                {
+                    <li>
+                        <a>
+                            @mainProduct.NameTR
+                        </a>
+                        <ul>
+                            @foreach (var subProduct in Model.GetSubProducts(mainProduct.Id))
+                            {
+                                <li><a href="/Home/Products/@subProduct.Id">@subProduct.NameTR</a></li>
+                            }
+                        </ul>
+
+                    </li>
+                }
+            </ul>
+        </li>
+        @*<li><a href="/Home/Portfolio">Referanslar</a></li>*@
+        <li class="active"><a href="/Home/Contact">İletişim</a></li>
+    </ul>
+    <select class="mobile-menu">
+        <option selected="selected" value="/">Anasayfa</option>
+        <option value="/Home/About">Hakkımızda</option>
+        <option value="">Ürünler</option>
+        @foreach (var mainProduct in Model.GetMainProducts())
+    {
+            @*<option value="">- @mainProduct.NameTR</option>*@
+            foreach (var subProduct in Model.GetSubProducts(mainProduct.Id))
+            {
+                <option value="/Home/Products/@subProduct.Id">&nbsp;&nbsp;- @subProduct.NameTR</option>
+            }
+        }
+        @*<option value="/Home/Portfolio">Referanslar</option>*@
+        <option value="/Home/Contact">İletişim</option>
+    </select>
+}
+
+@section Main
+{
+    <!-- gallery -->
+    <div class="gallery">
+        <iframe class="contact-page-2" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;sll=40.024542, 32.638849&amp;sspn=40.024542, 32.638849&amp;ie=UTF8&amp;hq=&amp;hnear=Ankara&amp;t=m&amp;ll=40.024542, 32.638849&amp;spn=40.024542, 32.638849&amp;z=13&amp;output=embed"></iframe>
+    </div>
+    <div class="container">
+        <!-- content -->
+        <div id="content">
+            <div class="c1">
+                <!-- post-box -->
+                <article class="post-box" style="margin-top:21px;">
+                    <!-- comment-form -->
+                    @using (Html.BeginForm("", "", FormMethod.Post, new { @class = "comment-form", @id = "cont_form" }))
+                    {
+                        <fieldset>
+                            <div class="meta">
+                                <h3>Bize Ulaşın</h3>
+                            </div>
+                            <div class="row">
+                                <label for="username">Ad Soyad <span style="color:red">@Html.ValidationMessageFor(m => m.Name)</span></label>
+                                <span class="text">
+                                    @Html.TextBoxFor(m => m.Name, new
+                               {
+                                   @type = "text",
+                                   @class = "text validate[required]"
+                               })
+                                </span>
+                            </div>
+                            <div class="row">
+                                <label for="email">E-posta <span style="color:red">@Html.ValidationMessageFor(m => m.Email)</span></label>
+                                <span class="text">
+                                    @Html.TextBoxFor(m => m.Email, new
+                               {
+                                   @type = "text",
+                                   @class = "text validate[required,custom[email]]"
+                               })
+                                </span>
+                            </div>
+                            <div class="row">
+                                <label for="subject">Konu <span style="color:red">@Html.ValidationMessageFor(m => m.Subject)</span></label>
+                                <span class="text">
+                                    @Html.TextBoxFor(m => m.Subject, new
+                               {
+                                   @type = "text",
+                                   @class = "text"
+                               })
+                                </span>
+                            </div>
+                            <div class="row">
+                                <label for="message">Mesaj <span style="color:red">@Html.ValidationMessageFor(m => m.Message)</span></label>
+                                <span class="textarea">
+                                    @Html.TextAreaFor(m => m.Message, new
+                               {
+                                   @class = "w_focus validate[required]",
+                                   @cols = "30",
+                                   @rows = "10"
+                               })
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="submit">
+                                    Gönder
+                                    <input type="submit" formaction="/Home/Contact" />
+                                </span>
+                            </div>
+                        </fieldset>
+                    }
+
+                    @if (Model.Result != null)
+                    {
+                        if (Model.Result == true)
+                        {
+                             <!-- msg-box success -->
+                            <h4>Tebrikler!</h4>
+                            <p>&nbsp;</p>
+                            <div class="msg-box success">
+                                <div class="text-box">
+                                    @Model.ResultMessage
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                             <!-- msg-box error -->
+                            <h4>Hata!</h4>
+                            <p>&nbsp;</p>
+                            <div class="msg-box error">
+                                <div class="text-box">
+                                    @Model.ResultMessage
+                                </div>
+                            </div>
+                        }
+                    }
+                </article>
+            </div>
+        </div>
+    </div>
+}

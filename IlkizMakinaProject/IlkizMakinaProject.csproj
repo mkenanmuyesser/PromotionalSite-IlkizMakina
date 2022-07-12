@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B15765D3-8B8E-444B-86B5-C16D3EEF681C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IlkizMakinaProject</RootNamespace>
+    <AssemblyName>IlkizMakinaProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\Portfolio.cs" />
+    <Compile Include="Data\SubBanner.cs" />
+    <Compile Include="Data\Banner.cs" />
+    <Compile Include="Data\Product.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductsViewModel.cs" />
+    <Compile Include="Models\PortfolioViewModel.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
+    <Compile Include="Models\AboutViewModel.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
+    <Compile Include="Models\MenuViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\empty.txt" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\about.png" />
+    <Content Include="Content\Images\Banners\empty.txt" />
+    <Content Include="Content\Images\blank_300_199.jpg" />
+    <Content Include="Content\Images\blank_620_412.jpg" />
+    <Content Include="Content\Images\blank_220_146.jpg" />
+    <Content Include="Content\Images\empty.txt" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Portfolios\empty.txt" />
+    <Content Include="Content\Images\Products\empty.txt" />
+    <Content Include="Content\Images\SubBanners\empty.txt" />
+    <Content Include="Data\ProjectData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Scripts\bootstrap.js" />
+    <Content Include="Content\Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\acer.pubxml" />
+    <None Include="Properties\PublishProfiles\dell.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="_Demo\blog-large-image.html" />
+    <Content Include="_Demo\blog-medium-image.html" />
+    <Content Include="_Demo\blog-single-post.html" />
+    <Content Include="_Demo\css\accordion\accordion.css" />
+    <Content Include="_Demo\css\accordion\shadow.png" />
+    <Content Include="_Demo\css\all.css" />
+    <Content Include="_Demo\css\carousel\carousel.css" />
+    <Content Include="_Demo\css\flexslider\flexslider.css" />
+    <Content Include="_Demo\css\flexslider\images\bg_direction_nav.png" />
+    <Content Include="_Demo\css\ie.css" />
+    <Content Include="_Demo\css\nivoslider\nivo-slider.css" />
+    <Content Include="_Demo\css\nivoslider\themes\bar\arrows.png" />
+    <Content Include="_Demo\css\nivoslider\themes\bar\bar.css" />
+    <Content Include="_Demo\css\nivoslider\themes\bar\bullets.png" />
+    <Content Include="_Demo\css\nivoslider\themes\bar\loading.gif" />
+    <Content Include="_Demo\css\nivoslider\themes\dark\arrows.png" />
+    <Content Include="_Demo\css\nivoslider\themes\dark\bullets.png" />
+    <Content Include="_Demo\css\nivoslider\themes\dark\dark.css" />
+    <Content Include="_Demo\css\nivoslider\themes\dark\loading.gif" />
+    <Content Include="_Demo\css\nivoslider\themes\default\arrows.png" />
+    <Content Include="_Demo\css\nivoslider\themes\default\bullets.png" />
+    <Content Include="_Demo\css\nivoslider\themes\default\default.css" />
+    <Content Include="_Demo\css\nivoslider\themes\default\loading.gif" />
+    <Content Include="_Demo\css\nivoslider\themes\light\arrows.png" />
+    <Content Include="_Demo\css\nivoslider\themes\light\bullets-.png" />
+    <Content Include="_Demo\css\nivoslider\themes\light\bullets.png" />
+    <Content Include="_Demo\css\nivoslider\themes\light\light.css" />
+    <Content Include="_Demo\css\nivoslider\themes\light\loading.gif" />
+    <Content Include="_Demo\css\onebyone\animate.css" />
+    <Content Include="_Demo\css\onebyone\default.css" />
+    <Content Include="_Demo\css\onebyone\images\--circlebutton.png" />
+    <Content Include="_Demo\css\onebyone\images\-circlebutton.png" />
+    <Content Include="_Demo\css\onebyone\images\circlebutton.png" />
+    <Content Include="_Demo\css\onebyone\images\next.png" />
+    <Content Include="_Demo\css\onebyone\images\paven.png" />
+    <Content Include="_Demo\css\onebyone\images\prev.png" />
+    <Content Include="_Demo\css\onebyone\jquery.onebyone.css" />
+    <Content Include="_Demo\css\prettyPhoto.css" />
+    <Content Include="_Demo\images\arrow.png" />
+    <Content Include="_Demo\images\arrow2-hover.png" />
+    <Content Include="_Demo\images\arrow2.png" />
+    <Content Include="_Demo\images\arrow3.png" />
+    <Content Include="_Demo\images\arrow4.png" />
+    <Content Include="_Demo\images\arrow5.png" />
+    <Content Include="_Demo\images\arrows.png" />
+    <Content Include="_Demo\images\author.jpg" />
+    <Content Include="_Demo\images\blog-post-1-big.jpg" />
+    <Content Include="_Demo\images\blog-post-1-medium.jpg" />
+    <Content Include="_Demo\images\blog-post-1-small.jpg" />
+    <Content Include="_Demo\images\blog-post-1.jpg" />
+    <Content Include="_Demo\images\blog-post-2-big.jpg" />
+    <Content Include="_Demo\images\blog-post-2-medium.jpg" />
+    <Content Include="_Demo\images\blog-post-2-small.jpg" />
+    <Content Include="_Demo\images\blog-post-2.jpg" />
+    <Content Include="_Demo\images\blog-post-3-big.jpg" />
+    <Content Include="_Demo\images\blog-post-3-medium.jpg" />
+    <Content Include="_Demo\images\blog-post-3-small.jpg" />
+    <Content Include="_Demo\images\blog-post-3.jpg" />
+    <Content Include="_Demo\images\blog-post-4-big.jpg" />
+    <Content Include="_Demo\images\blog-post-4-medium.jpg" />
+    <Content Include="_Demo\images\blog-post-4-small.jpg" />
+    <Content Include="_Demo\images\blog-post-4.jpg" />
+    <Content Include="_Demo\images\body-bg.jpg" />
+    <Content Include="_Demo\images\btn-next-hover.png" />
+    <Content Include="_Demo\images\btn-next.png" />
+    <Content Include="_Demo\images\btn-prev-hover.png" />
+    <Content Include="_Demo\images\btn-prev.png" />
+    <Content Include="_Demo\images\bullet.png" />
+    <Content Include="_Demo\images\bullet2.png" />
+    <Content Include="_Demo\images\dribbble-dark-hover.png" />
+    <Content Include="_Demo\images\dribbble-dark.png" />
+    <Content Include="_Demo\images\dribbble-hover.png" />
+    <Content Include="_Demo\images\dribbble.png" />
+    <Content Include="_Demo\images\drop-arrow.png" />
+    <Content Include="_Demo\images\error-btn-close-hover.png" />
+    <Content Include="_Demo\images\error-btn-close.png" />
+    <Content Include="_Demo\images\facebook-dark-hover.png" />
+    <Content Include="_Demo\images\facebook-dark.png" />
+    <Content Include="_Demo\images\facebook-hover.png" />
+    <Content Include="_Demo\images\facebook.png" />
+    <Content Include="_Demo\images\google-dark-hover.png" />
+    <Content Include="_Demo\images\google-dark.png" />
+    <Content Include="_Demo\images\google-hover.png" />
+    <Content Include="_Demo\images\google.png" />
+    <Content Include="_Demo\images\ico-phone.png" />
+    <Content Include="_Demo\images\ico1-hover.png" />
+    <Content Include="_Demo\images\ico1.png" />
+    <Content Include="_Demo\images\ico2-hover.png" />
+    <Content Include="_Demo\images\ico2.png" />
+    <Content Include="_Demo\images\ico3-hover.png" />
+    <Content Include="_Demo\images\ico3.png" />
+    <Content Include="_Demo\images\ico4-hover.png" />
+    <Content Include="_Demo\images\ico4.png" />
+    <Content Include="_Demo\images\ico5-hover.png" />
+    <Content Include="_Demo\images\ico5.png" />
+    <Content Include="_Demo\images\ico6-hover.png" />
+    <Content Include="_Demo\images\ico6.png" />
+    <Content Include="_Demo\images\icos-1.png" />
+    <Content Include="_Demo\images\icos-2.png" />
+    <Content Include="_Demo\images\icos-3.png" />
+    <Content Include="_Demo\images\icos-4.png" />
+    <Content Include="_Demo\images\img4-hover.png" />
+    <Content Include="_Demo\images\img4.png" />
+    <Content Include="_Demo\images\img5-hover.png" />
+    <Content Include="_Demo\images\img5.png" />
+    <Content Include="_Demo\images\img6-hover.png" />
+    <Content Include="_Demo\images\img6.png" />
+    <Content Include="_Demo\images\img7-hover.png" />
+    <Content Include="_Demo\images\img7.png" />
+    <Content Include="_Demo\images\img8-hover.png" />
+    <Content Include="_Demo\images\img8.png" />
+    <Content Include="_Demo\images\info-btn-close-hover.png" />
+    <Content Include="_Demo\images\info-btn-close.png" />
+    <Content Include="_Demo\images\logo-red.png" />
+    <Content Include="_Demo\images\magnify-glass-hover.png" />
+    <Content Include="_Demo\images\magnify-glass.png" />
+    <Content Include="_Demo\images\none.gif" />
+    <Content Include="_Demo\images\pinterest-dark-hover.png" />
+    <Content Include="_Demo\images\pinterest-dark.png" />
+    <Content Include="_Demo\images\pinterest-hover.png" />
+    <Content Include="_Demo\images\pinterest.png" />
+    <Content Include="_Demo\images\play.png" />
+    <Content Include="_Demo\images\popular-post-1.jpg" />
+    <Content Include="_Demo\images\popular-post-2.jpg" />
+    <Content Include="_Demo\images\popular-post-3.jpg" />
+    <Content Include="_Demo\images\popular-post-4.jpg" />
+    <Content Include="_Demo\images\popular-post-5.jpg" />
+    <Content Include="_Demo\images\popular-post-6.jpg" />
+    <Content Include="_Demo\images\portfolio-1-big.jpg" />
+    <Content Include="_Demo\images\portfolio-1-medium.jpg" />
+    <Content Include="_Demo\images\portfolio-1-small.jpg" />
+    <Content Include="_Demo\images\portfolio-1.jpg" />
+    <Content Include="_Demo\images\portfolio-2-big.jpg" />
+    <Content Include="_Demo\images\portfolio-2-medium.jpg" />
+    <Content Include="_Demo\images\portfolio-2-small.jpg" />
+    <Content Include="_Demo\images\portfolio-2.jpg" />
+    <Content Include="_Demo\images\portfolio-3-big.jpg" />
+    <Content Include="_Demo\images\portfolio-3-medium.jpg" />
+    <Content Include="_Demo\images\portfolio-3-small.jpg" />
+    <Content Include="_Demo\images\portfolio-3.jpg" />
+    <Content Include="_Demo\images\portfolio-4-big.jpg" />
+    <Content Include="_Demo\images\portfolio-4-medium.jpg" />
+    <Content Include="_Demo\images\portfolio-4-small.jpg" />
+    <Content Include="_Demo\images\portfolio-4.jpg" />
+    <Content Include="_Demo\images\portfolio-5-big.jpg" />
+    <Content Include="_Demo\images\portfolio-5-small.jpg" />
+    <Content Include="_Demo\images\portfolio-5.jpg" />
+    <Content Include="_Demo\images\portfolio-6-big.jpg" />
+    <Content Include="_Demo\images\portfolio-6-small.jpg" />
+    <Content Include="_Demo\images\portfolio-6.jpg" />
+    <Content Include="_Demo\images\portfolio-7-big.jpg" />
+    <Content Include="_Demo\images\portfolio-7-small.jpg" />
+    <Content Include="_Demo\images\portfolio-7.jpg" />
+    <Content Include="_Demo\images\portfolio-8-big.jpg" />
+    <Content Include="_Demo\images\portfolio-8-small.jpg" />
+    <Content Include="_Demo\images\portfolio-8.jpg" />
+    <Content Include="_Demo\images\portfolio-9-big.jpg" />
+    <Content Include="_Demo\images\portfolio-9-small.jpg" />
+    <Content Include="_Demo\images\portfolio-9.jpg" />
+    <Content Include="_Demo\images\rss-dark-hover.png" />
+    <Content Include="_Demo\images\rss-dark.png" />
+    <Content Include="_Demo\images\rss-hover.png" />
+    <Content Include="_Demo\images\rss.png" />
+    <Content Include="_Demo\images\selector.png" />
+    <Content Include="_Demo\images\separator.png" />
+    <Content Include="_Demo\images\separator2.png" />
+    <Content Include="_Demo\images\separator4.png" />
+    <Content Include="_Demo\images\slider-1-flex.jpg" />
+    <Content Include="_Demo\images\slider-2-flex.jpg" />
+    <Content Include="_Demo\images\slider-3-flex.jpg" />
+    <Content Include="_Demo\images\slider-4-flex.jpg" />
+    <Content Include="_Demo\images\slider-5-flex.jpg" />
+    <Content Include="_Demo\images\slider-6-flex.jpg" />
+    <Content Include="_Demo\images\slider-accordion-1.jpg" />
+    <Content Include="_Demo\images\slider-accordion-2.jpg" />
+    <Content Include="_Demo\images\slider-accordion-3.jpg" />
+    <Content Include="_Demo\images\slider-carousel-1.jpg" />
+    <Content Include="_Demo\images\slider-carousel-2.jpg" />
+    <Content Include="_Demo\images\slider-carousel-3.jpg" />
+    <Content Include="_Demo\images\slider-flex-1.jpg" />
+    <Content Include="_Demo\images\slider-flex-2.jpg" />
+    <Content Include="_Demo\images\slider-flex-3.jpg" />
+    <Content Include="_Demo\images\slider-nivo-1.jpg" />
+    <Content Include="_Demo\images\slider-nivo-2.jpg" />
+    <Content Include="_Demo\images\slider-nivo-3.jpg" />
+    <Content Include="_Demo\images\slider-onebyone-1.jpg" />
+    <Content Include="_Demo\images\slider-onebyone-2.jpg" />
+    <Content Include="_Demo\images\slider-onebyone-3.jpg" />
+    <Content Include="_Demo\images\slider-piecemaker-1.jpg" />
+    <Content Include="_Demo\images\slider-piecemaker-2.jpg" />
+    <Content Include="_Demo\images\slider-piecemaker-3.jpg" />
+    <Content Include="_Demo\images\slider-revolution-1-bg.jpg" />
+    <Content Include="_Demo\images\slider-revolution-1.png" />
+    <Content Include="_Demo\images\slider-revolution-2-bg.jpg" />
+    <Content Include="_Demo\images\slider-revolution-2.png" />
+    <Content Include="_Demo\images\slider-revolution-3-bg.jpg" />
+    <Content Include="_Demo\images\slider-revolution-3.png" />
+    <Content Include="_Demo\images\slider-revolution-4-bg.jpg" />
+    <Content Include="_Demo\images\succes-btn-close-hover.png" />
+    <Content Include="_Demo\images\succes-btn-close.png" />
+    <Content Include="_Demo\images\team.jpg" />
+    <Content Include="_Demo\images\testimonial-1.jpg" />
+    <Content Include="_Demo\images\testimonial-2.jpg" />
+    <Content Include="_Demo\images\twitter-dark-hover.png" />
+    <Content Include="_Demo\images\twitter-dark.png" />
+    <Content Include="_Demo\images\twitter-hover.png" />
+    <Content Include="_Demo\images\twitter.png" />
+    <Content Include="_Demo\images\vimeo-dark-hover.png" />
+    <Content Include="_Demo\images\vimeo-dark.png" />
+    <Content Include="_Demo\images\vimeo-hover.png" />
+    <Content Include="_Demo\images\vimeo.png" />
+    <Content Include="_Demo\images\warinig-btn-close-hover.png" />
+    <Content Include="_Demo\images\warinig-btn-close.png" />
+    <Content Include="_Demo\images\zoom.png" />
+    <Content Include="_Demo\index-2.html" />
+    <Content Include="_Demo\index-3.html" />
+    <Content Include="_Demo\index-4.html" />
+    <Content Include="_Demo\index-5.html" />
+    <Content Include="_Demo\index-6.html" />
+    <Content Include="_Demo\index-7.html" />
+    <Content Include="_Demo\index-8.html" />
+    <Content Include="_Demo\index.html" />
+    <Content Include="_Demo\js\accordion\accordion.js" />
+    <Content Include="_Demo\js\accordion\PIE.htc" />
+    <Content Include="_Demo\js\carousel\jquery.carouFredSel-5.5.0.js" />
+    <Content Include="_Demo\js\contact\form.css" />
+    <Content Include="_Demo\js\contact\jquery.validationEngine.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-cz.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-da.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-de.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-en.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-es.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-et.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-fa.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-fi.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-fr.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-hr.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-it.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-ja.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-nl.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-pl.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-pt.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-pt_BR.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-ro.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-ru.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-sv.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-tr.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-zh_CN.js" />
+    <Content Include="_Demo\js\contact\languages\jquery.validationEngine-zh_TW.js" />
+    <Content Include="_Demo\js\dropdown-menu.js" />
+    <Content Include="_Demo\js\flexslider\froogaloop.js" />
+    <Content Include="_Demo\js\flexslider\jquery.easing.js" />
+    <Content Include="_Demo\js\flexslider\jquery.fitvid.js" />
+    <Content Include="_Demo\js\flexslider\jquery.flexslider-min.js" />
+    <Content Include="_Demo\js\flexslider\jquery.flexslider.js" />
+    <Content Include="_Demo\js\flexslider\jquery.mousewheel.js" />
+    <Content Include="_Demo\js\flexslider\modernizr.js" />
+    <Content Include="_Demo\js\flexslider\shBrushCss.js" />
+    <Content Include="_Demo\js\flexslider\shBrushJScript.js" />
+    <Content Include="_Demo\js\flexslider\shBrushXml.js" />
+    <Content Include="_Demo\js\flexslider\shCore.js" />
+    <Content Include="_Demo\js\isotope\isotope.css" />
+    <Content Include="_Demo\js\isotope\jquery.isotope.min.js" />
+    <Content Include="_Demo\js\jquery-1.7.1.min.js" />
+    <Content Include="_Demo\js\jquery-1.8.0.min.js" />
+    <Content Include="_Demo\js\jquery.main.js" />
+    <Content Include="_Demo\js\jquery.prettyPhoto.js" />
+    <Content Include="_Demo\js\nivoslider\jquery.nivo.slider.js" />
+    <Content Include="_Demo\js\nivoslider\jquery.nivo.slider.pack.js" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\demo.html" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\images\dev7logo.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\images\nemo.jpg" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\images\toystory.jpg" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\images\up.jpg" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\images\walle.jpg" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\scripts\jquery-1.7.1.min.js" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\style.css" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\jquery.nivo.slider.js" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\jquery.nivo.slider.pack.js" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\license.txt" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\nivo-slider.css" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\bar\arrows.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\bar\bar.css" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\bar\bullets.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\bar\loading.gif" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\dark\arrows.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\dark\bullets.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\dark\dark.css" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\dark\loading.gif" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\default\arrows.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\default\bullets.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\default\default.css" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\default\loading.gif" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\light\arrows.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\light\bullets.png" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\light\light.css" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\light\loading.gif" />
+    <Content Include="_Demo\js\onebyone\jquery.onebyone.js" />
+    <Content Include="_Demo\js\onebyone\jquery.touchwipe.min.js" />
+    <Content Include="_Demo\js\piecemaker\piecemaker.css" />
+    <Content Include="_Demo\js\piecemaker\piecemaker.swf" />
+    <Content Include="_Demo\js\piecemaker\piecemaker.xml" />
+    <Content Include="_Demo\js\piecemaker\piecemaker2_3d.js" />
+    <Content Include="_Demo\js\piecemaker\swfobject.js" />
+    <Content Include="_Demo\js\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="_Demo\js\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="_Demo\js\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="_Demo\js\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="_Demo\js\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="_Demo\js\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\close.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\default_thumb.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\loader.gif" />
+    <Content Include="_Demo\js\prettyPhoto\default\sprite.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\sprite_next.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\sprite_x.png" />
+    <Content Include="_Demo\js\prettyPhoto\default\sprite_y.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\loader.gif" />
+    <Content Include="_Demo\js\prettyPhoto\facebook\sprite.png" />
+    <Content Include="_Demo\js\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="_Demo\js\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="_Demo\js\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="_Demo\js\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="_Demo\js\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="_Demo\js\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="_Demo\js\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="_Demo\js\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="_Demo\js\prettyPhoto\light_square\loader.gif" />
+    <Content Include="_Demo\js\prettyPhoto\light_square\sprite.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\-bullet.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrowleft.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrowright.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrow_large_left.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrow_large_right.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrow_left.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrow_left2.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrow_right.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrow_right2.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\black50.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\boxed_bgtile.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\bullet.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\bullets.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\bullets2.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\bullet_boxed.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\coloredbg.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\grain.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\large_left+.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\large_left.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\large_right+.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\large_right.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\loader.gif" />
+    <Content Include="_Demo\js\rs-plugin\assets\loader2.gif" />
+    <Content Include="_Demo\js\rs-plugin\assets\navigdots.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\navigdots_bgtile.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\shadow1.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\shadow2.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\shadow3.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\small_left.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\small_left_boxed.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\small_right.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\small_right_boxed.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\timer.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\timerdot.png" />
+    <Content Include="_Demo\js\rs-plugin\assets\transparent.jpg" />
+    <Content Include="_Demo\js\rs-plugin\assets\white50.png" />
+    <Content Include="_Demo\js\rs-plugin\css\fullwidth.css" />
+    <Content Include="_Demo\js\rs-plugin\css\settings.css" />
+    <Content Include="_Demo\js\rs-plugin\images\decor_inside.png" />
+    <Content Include="_Demo\js\rs-plugin\images\decor_inside_white.png" />
+    <Content Include="_Demo\js\rs-plugin\images\decor_testimonial.png" />
+    <Content Include="_Demo\js\rs-plugin\images\gradient\g30.png" />
+    <Content Include="_Demo\js\rs-plugin\images\gradient\g40.png" />
+    <Content Include="_Demo\js\rs-plugin\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="_Demo\js\rs-plugin\js\jquery.themepunch.revolution.js" />
+    <Content Include="_Demo\js\rs-plugin\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="_Demo\js\tabs.js" />
+    <Content Include="_Demo\pages-about.html" />
+    <Content Include="_Demo\pages-faq.html" />
+    <Content Include="_Demo\pages-services.html" />
+    <Content Include="_Demo\pages-site-tour.html" />
+    <Content Include="_Demo\pages-team.html" />
+    <Content Include="_Demo\pages-testimonials.html" />
+    <Content Include="_Demo\portfolio-four-columns.html" />
+    <Content Include="_Demo\portfolio-one-column.html" />
+    <Content Include="_Demo\portfolio-sortable.html" />
+    <Content Include="_Demo\portfolio-three-columns.html" />
+    <Content Include="_Demo\portfolio-two-columns.html" />
+    <Content Include="_Demo\shortcodes-buttons.html" />
+    <Content Include="_Demo\shortcodes-message-boxes.html" />
+    <Content Include="_Demo\shortcodes-pricing-tables.html" />
+    <Content Include="_Demo\shortcodes-tabs.html" />
+    <Content Include="_Demo\shortcodes-typography.html" />
+    <Content Include="_Demo\shortcodes-video.html" />
+    <Content Include="_Demo\slider-accordion.html" />
+    <Content Include="_Demo\slider-carousel.html" />
+    <Content Include="_Demo\slider-flex-1.html" />
+    <Content Include="_Demo\slider-flex-2.html" />
+    <Content Include="_Demo\slider-nivo.html" />
+    <Content Include="_Demo\slider-onebyone.html" />
+    <Content Include="_Demo\slider-piecemaker.html" />
+    <Content Include="_Demo\slider-revolution.html" />
+    <None Include="Content\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\Scripts\jquery-1.10.2.js" />
+    <Content Include="Content\Scripts\jquery-1.10.2.min.js" />
+    <None Include="Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Content\Scripts\jquery.validate.js" />
+    <Content Include="Content\Scripts\jquery.validate.min.js" />
+    <Content Include="Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Content\Scripts\respond.js" />
+    <Content Include="Content\Scripts\respond.min.js" />
+    <Content Include="Content\Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="_Demo\contact-1.php" />
+    <Content Include="_Demo\contact-2.php" />
+    <Content Include="_Demo\css\flexslider\images\Thumbs.db" />
+    <Content Include="_Demo\css\nivoslider\themes\.DS_Store" />
+    <Content Include="_Demo\css\nivoslider\themes\dark\.DS_Store" />
+    <Content Include="_Demo\css\nivoslider\themes\default\Thumbs.db" />
+    <Content Include="_Demo\css\nivoslider\themes\light\Thumbs.db" />
+    <Content Include="_Demo\css\onebyone\images\Thumbs.db" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\.DS_Store" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\.DS_Store" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\demo\images\.DS_Store" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\README" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\.DS_Store" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\dark\.DS_Store" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\default\Thumbs.db" />
+    <Content Include="_Demo\js\nivoslider\nivo-slider\themes\light\Thumbs.db" />
+    <Content Include="_Demo\js\rs-plugin\assets\arrows.psd" />
+    <Content Include="_Demo\js\rs-plugin\assets\bullets.psd" />
+    <Content Include="_Demo\js\rs-plugin\assets\small_arrows.psd" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Home\Portfolio.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Content\Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52452</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52452/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
