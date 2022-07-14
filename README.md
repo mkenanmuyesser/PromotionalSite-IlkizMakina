@@ -9,3 +9,7 @@ Promotional purpose website project
 Monolithic and without admin panel, static web project
 
 Used technologies : C#, Asp.Net Mvc
+
+Minran Kenan MÜYESSER
+mkenanmuyesser@hotmail.com
+https://www.linkedin.com/in/minran-kenan-müyesser
