@@ -12,4 +12,4 @@ Used technologies : C#, Asp.Net Mvc
 
 Minran Kenan MÜYESSER
 mkenanmuyesser@hotmail.com
-https://www.linkedin.com/in/minran-kenan-müyesser
+https://www.linkedin.com/in/mkenanmuyesser
